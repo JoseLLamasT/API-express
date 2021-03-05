@@ -2,28 +2,32 @@ const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
 const files = require('./lib/files');
-const creating  = require('./lib/inquirer');
+const creating = require('./lib/inquirer');
+const filequestion = require('./lib/questions/newFile');
 
-  clear();
-  if (files.directoryExists('.git')) {
-    console.log(chalk.red('Already a Git repository!'));
-    process.exit();
-  }
-  console.log(
-    chalk.magenta(
-      figlet.textSync('NODE.JS-API', { horizontalLayout: 'full' })
-    )
-    );
+clear();
+console.log(
+  chalk.magenta(figlet.textSync('NODE.JS-API', { horizontalLayout: 'full' }))
+);
+console.log(chalk.yellow('set up'));
+//  if (files.directoryExists('server')) {
+//    console.log(chalk.red('server already exist!'));
+//    let makeFile = filequestion.gitExist()
+//    if(makeFile){
+//      (async function () {
+//        const credentials = await creating.newFolder()
+//        console.log(credentials)
+//      })();
+//    }else{
+//      process.exit();
+//    }
+//  }
 
 const run = async () => {
-  try{
-    const credentials = await creating.apiSettings();
-  }catch(error){
-    console.log(error)
+  try {
+    await creating.apiSettings();
+  } catch (error) {
+    console.log(error);
   }
 };
 run();
-
-
-
-
