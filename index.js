@@ -9,19 +9,13 @@ clear();
 console.log(
   chalk.magenta(figlet.textSync('NODE.JS-API', { horizontalLayout: 'full' }))
 );
+if (files.directoryExists('server')) {
+  console.log(
+    chalk.red('the process was stopped because a server folder already exist')
+  );
+  process.exit();
+}
 console.log(chalk.yellow('set up'));
-//  if (files.directoryExists('server')) {
-//    console.log(chalk.red('server already exist!'));
-//    let makeFile = filequestion.gitExist()
-//    if(makeFile){
-//      (async function () {
-//        const credentials = await creating.newFolder()
-//        console.log(credentials)
-//      })();
-//    }else{
-//      process.exit();
-//    }
-//  }
 
 const run = async () => {
   try {
