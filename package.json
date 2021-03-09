@@ -1,29 +1,54 @@
 {
-  "name": "koa-koala",
-  "version": "0.0.1",
-  "description": "fast API setting",
-  "main": "src/index.js",
+  "name": "server-maker",
+  "version": "0.0.4",
+  "description": " an easy way to instalation a node.js API, choosing between express - koa as API itselg and  mongoose - squalize to interact with the Data Base ",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "/src/index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "node.js",
+    "express",
+    "koa",
+    "mysql",
+    "mongodb",
+    "mongoose",
+    "sequialize"
+  ],
   "author": "Jose Lamas",
-  "license": "ISC",
-  "bin": "",
+  "license": "MTI",
+  "bin": {
+    "apiservices": "bin/create-project",
+    "create-api": "bin/create-project"
+  },
+  "publishConfing": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseLLamasT/API-express.git"
+  },
+  "homepage": "https://github.com/JoseLLamasT/API-express/blob/main/README.md",
   "dependencies": {
-    "@octokit/auth-basic": "^1.4.8",
-    "@octokit/rest": "^18.2.0",
+    "@octokit/rest": "^18.3.5",
     "arg": "^5.0.0",
     "chalk": "^4.1.0",
     "clear": "^0.1.0",
     "clui": "^0.3.6",
     "configstore": "^5.0.1",
+    "esm": "^3.2.25",
     "figlet": "^1.5.0",
     "inquirer": "^7.3.3",
     "lodash": "^4.17.21",
     "minimist": "^1.2.5",
-    "simple-git": "^2.35.1",
-    "touch": "^3.1.0"
+    "simple-git": "^2.36.1",
+    "tedious": "^11.0.5",
+    "touch": "^3.1.0",
+    "util": "^0.12.3"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/JoseLLamasT/API-express/issues"
   }
 }
