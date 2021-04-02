@@ -1,4 +1,4 @@
-﻿# npx create-api
+﻿# npx server-maker
 
 it is a tool that allows making a whole basic API, using technologies such as node.js including express and koa, also mongoose or sequalize as ORM.
 
